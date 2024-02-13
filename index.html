@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/frame.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <style>
+        .modalvideo {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modalvideo-content {
+    position: relative;
+    width: 95%;
+    max-width: 800px;
+}
+
+.closevideo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.closevideo:hover {
+    color: #555;
+}
+
+#videoIframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+    </style>
+</head>
+<body>
+    <!-- estrutctura general -->
+    <section class="h-2em bg-g4"></section>
+    <header class="bg-b w100">
+        <div class="container padhor-1 w100 mgauto">
+            <nav class="gap1 rel">
+                <div class="menu-icons">
+                    <i class="icon ion-md-menu clr-n"></i>
+                    <i class="icon ion-md-close"></i>
+                </div>
+                <a href="index.html" class="logo padding05 flex-centro">
+                    <img class="w80" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
+                </a>
+                <ul class="nav-list w100 flex-spacebetween mayus f-bold">
+                    <div class="flex-c-resp gap1 flex-a clr-n">
+                        <li class="rel">
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li class="rel">
+                            <a href="premios.html">Premios</a>
+                        </li>
+                        <li class="rel">
+                            <a href="ganadores.html">Ganadores</a>
+                        </li>
+                    </div>
+                    <div class="flex-c-resp gap1"> 
+                        <li class="move-right btn flex-centro border3px brdclr-n f-bold w-maxc padhor-1-2 border20">
+                            <a href="login.html">Iniciar Sesión</a>
+                            
+                        </li>
+                        <li class="move-right btn flex-centro border3px bg-verd  brdclr-n f-bold w-maxc padhor-1-2 border20">
+                            <a href="crearcuenta.html">Suscribete</a>
+                        </li>
+                        <li class="hidden mw-ico-3 bg-1 bordercircular flex-centro">
+                            <a href="#" class="w100 h100">
+                                <img src="" alt="">
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <main class="h-maxc bg-b ">
+        <!-- Columna 5 - 2 Columna -->
+        <section class="padsup-2 mgauto bg-g1" alt="banner">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 mw-72 mgauto border20">
+                    <div class="padsup-2 gridcol1-2-resp gapresp1">
+                    <!-- contenido Banner -->
+                        <div class="flex-colum flex-c mgauto gap1 w100 mw-580 txt-centro">
+                            <h1 class="txt-der">¡Adquiere tu Chip  corporativo todo ilimitado!</h1>
+                            <p class="txt-der">Sin evaluaciones Con CHAPA TU PLAN adquiere tu Sim de forma inmediata</p>
+                            
+                            <a class="padhor-1-2 border20 bg-verd border3px f-bold w-maxc" href="#modelos">Ver modelos</a>
+                        </div>
+                        <div class="rel flex-c none-resp w100">
+                            <div class="mw-320 aspect-1 bg-1 h320 bordercircular abs"></div>
+                            <img class="w100 mw-420 zindex1" src="./img/showingphone.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="padsup-2 mgauto sinover" alt="banner2">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 mw-72 mgauto border20">
+                    <div class="padsup-2 gridcol1-2-resp gapresp1">
+                    <!-- contenido Banner -->
+                        <div class="flex-colum flex-c mgauto gap1 w100 mw-580 txt-centro">
+                            <h1 class="txt-der">Con Chapa tu plan  estrena SIM nuevo todo ilimitado desde los 40soles !</h1>
+                            <p class="txt-der">Llévate el plan que mereces Internet ilimitado + llamadas ilimitadas a nivel nacional</p>
+                            <ul class="txt-der flex-colum gap-5">
+                                <li class="flex gap-5">
+                                    <img class="mw-ico-1" src="./img/Check_green_circle.svg" alt="">
+                                    <p>es rápido y fácil, solo con tu dni o carnet de extranjería</p>
+                                </li>
+                                <li class="flex gap-5">
+                                    <img class="mw-ico-1" src="./img/Check_green_circle.svg" alt="">
+                                    <p>no necesitas historial crediticio</p>
+                                </li>
+                                <li class="flex gap-5">
+                                    <img class="mw-ico-1" src="./img/Check_green_circle.svg" alt="">
+                                    <p>participa de sorteos y gana premios mensuales</p>
+                                </li>
+                            </ul>
+                            <a class="padhor-1-2 border20 bg-verd border3px f-bold w-maxc" href="#modelos">Ver modelos</a>
+                        </div>
+                        <div class="rel flex-c w100">
+                            <div class="mw-320 aspect-1 bg-1 h320 bordercircular abs"></div>
+                            <img class="w100 mw-420 zindex1" src="./img/celularfeliz.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="padsup-3 mgauto bg-g1" id="">
+            <div class="padhor-1 clr-1 txt-centro mw-52 mgauto flex-colum gap1">
+                <p>Principales marcas con la que trabajamos</p>
+                <div class="flex-w flex-centro mgauto gap1">
+                    <div class="mw-150 padding05">
+                        <img class="w100" src="./img/movistar-logo.png" alt="">
+                    </div>
+                    <div class="mw-150 padding05">
+                        <img class="w100" src="./img/claro.png" alt="">
+                    </div>
+                    <div class="mw-150 padding05">
+                        <img class="w100" src="./img/entel-logo.png" alt="">
+                    </div>
+                    <div class="mw-150 padding05">
+                        <img class="w100" src="./img/bitellogo.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="padvert3 mgauto bg-b" id="">
+            <div class="padhor-1 clr-1 txt-centro mw-52 mgauto flex-colum gap1">
+                <h2 class="">Miles de peruanos ya tienen su SIM Corporativo con Chapa tu plan</h2>
+                <p>Tienen una amplia facilidad de pagos e increíbles premios mensuales</p>
+                <div class="flex-w flex-centro gap1">
+                    <div class="mw-ico-5 aspect-1 bg-1 bordercircular clr-b flex-centro">s</div>
+                    <div class="mw-ico-5 aspect-1 bg-1 bordercircular clr-b flex-centro">s</div>
+                    <div class="mw-ico-5 aspect-1 bg-1 bordercircular clr-b flex-centro">s</div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="padvert3 mgauto " id="">
+            <div class="padhor-1">
+                <div class="w100 mw-1080 mgauto rel flex-colum gap1 flex-centro padding3 minh-270 sinover">
+                    <div class="border20 abs lef0 right0 minh-270 zindex0 sinover flex-centro">
+                        <div class="abs w100 h100 zindex1 lef0 right0 border20 sinover" style="background-color: #40404094;"></div>
+                        <img class="w100 abs lef0 right0 zindex0 border20 scl3-5" src="https://www.payjoy.com/pe/wp-content/uploads/sites/9/2022/03/testimonio-1060x395.jpg" alt="">
+                    </div>
+                    <h3 class="zindex1 clr-b">Preguntamos a nuestros clientes que les parece el servicio</h3>
+
+                    <a id="openModalBtn" class="zindex1 clr-b">Ver video</a>
+                </div>
+            </div>
+        </section>
+        <section class="padsup-2 mgauto bg-g4">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 border20 mw-72 mgauto txt-centro">
+                    <!-- contenido Banner -->
+                    <h2 class="clr-b">Preguntas Frecuentes</h2>
+                    <div class="w100 mgauto rel flex-colum gap1 mgtp2 sombra">
+            
+                        <div class="topic bg-b border2px brdclr-n padding1">
+                            <div class="open">
+                              <p class="question">¿Cómo funciona el sorteo mensual?</p>
+                              <span class="faq-t"></span>
+                            </div>
+                            <p class="answer">Nuestro sorteo mensual es sencillo. Al suscribirte, recibirás automáticamente una o más participaciones, dependiendo de tu plan. Durante el sorteo mensual, seleccionamos aleatoriamente a un ganador de entre todos los participantes.</p>
+                          </div>
+                       
+                          <div class="topic bg-b border2px brdclr-n padding1">
+                            <div class="open">
+                            <p class="question">¿Cuáles son los premios disponibles?
+                        </p><span class="faq-t"></span>
+                            </div>
+                            <p class="answer">Los premios varían cada mes e incluyen celulares de última generación, motocicletas, automóviles, electrodomésticos y más. Puedes encontrar información detallada sobre los premios actuales en nuestra página principal.</p>
+                          </div>
+                          <div class="topic bg-b border2px brdclr-n padding1">
+                            <div class="open">
+                            <p class="question">¿Cómo me suscribo?
+                        </p><span class="faq-t"></span>
+                            </div>
+                            <p class="answer">Es fácil. Visita nuestra sección de <a href="#seccion-suscripcion">suscripción</a>, elige el plan que más te convenga y sigue los pasos para completar el proceso de suscripción. Una vez suscrito, estás automáticamente participando en el próximo sorteo.</p>
+                          </div>
+                       
+                      </div>
+                </div>
+            </div>
+        </section>
+        <div id="videoModal" class="modalvideo">
+            <div class="modalvideo-content">
+                <span id="closeModalBtn" class="closevideo">&times;</span>
+                <iframe id="videoIframe" src="https://www.youtube.com/embed/-JjTcZGkNdI?si=WobPPWrbl-hc2eGC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <!-- estrutctura general -->
+    
+    <!-- navegador mobil -->
+    <!-- navegador mobil -->
+    <!-- modals -->
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/countdown.js"></script>
+    <script src="./js/modal.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        //Create function to select elements
+        //Open and close nav on click
+        const menuIcon = document.querySelector(".menu-icons");
+        menuIcon.addEventListener("click", () => {
+            console.log("OK");
+            const nav = document.getElementsByTagName("nav")[0];
+            nav.classList.toggle("active");
+        });
+        
+    </script>
+    <script>
+        $(".open").click( function () {
+        var container = $(this).parents(".topic");
+        var answer = container.find(".answer");
+        var trigger = container.find(".faq-t");
+            
+        answer.slideToggle(200);
+            
+        if (trigger.hasClass("faq-o")) {
+        trigger.removeClass("faq-o");
+        }
+        else {
+        trigger.addClass("faq-o");
+        }
+
+        if (container.hasClass("expanded")) {
+        container.removeClass("expanded");
+        }
+        else {
+        container.addClass("expanded");
+        }
+        });
+    </script>
+    <script>
+        document.getElementById('openModalBtn').addEventListener('click', function() {
+    document.getElementById('videoModal').style.display = 'flex';
+});
+
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+    document.getElementById('videoModal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    var modalvideo = document.getElementById('videoModal');
+    if (event.target === modalvideo) {
+        modalvideo.style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+</html>

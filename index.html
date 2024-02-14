@@ -15,7 +15,7 @@
         .modalvideo {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     left: 0;
     top: 0;
     width: 100%;
@@ -62,17 +62,20 @@
         }
     </style>
 </head>
-<body>
+<body class="rel">
     <!-- estrutctura general -->
     <section class="h-2em bg-g4  ">
-        <div class="container flex-jend padhor-1 gap1 flex-a mgauto h100">
-            <li class="h80">
-                <a class="border3px bg-verd brdclr-n f-bold h100 w100 padhor-1 flex-a border05" href="login.html">Ingresar</a>
+        <div class="container flex-jend padhor-1 flex-a mgauto h100">
+            <li class="h100 border-hor1px brdclr-g1">
+                <a class="h100 w100 padhor-1 flex-a clr-g1 clr-hover-1" href="login.html">Mi cuenta</a>
+            </li>
+            <li class="h100 border-hor1px brdclr-g1">
+                <a class="h100 w100 padhor-1 flex-a clr-g1 clr-hover-1" href="login.html">Ingresar</a>
             </li>
         </div>
         
     </section>
-    <header class="bg-b w100">
+    <header class="bg-b w100 sticky zindex3 top0 lef0 bx-bot">
         <div class="container padhor-1 w100 mgauto">
             <nav class="gap1 rel">
                 <div class="menu-icons">
@@ -94,22 +97,14 @@
                             <a href="ganadores.html">Ganadores</a>
                         </li>
                     </div>
-                    <div class="flex-c-resp gap1"> 
-                        <!-- <li class="move-right btn flex-centro border3px brdclr-n f-bold w-maxc padhor-1-2 border20">
-                            <a href="login.html">Iniciar Sesión</a>
-                            
-                        </li>
-                        <li class="move-right btn flex-centro border3px bg-verd brdclr-n f-bold w-maxc padhor-1-2 border20">
-                            <a href="crearcuenta.html">Suscribete</a>
-                        </li> -->
+                    <!-- <div class="flex-c-resp gap1"> 
                         <li class="mw-ico-3 bg-1 bordercircular flex-centro">
                             <a href="#" class="w100 h100">
                                 <img src="" alt="">
                             </a>
                         </li>
-                    </div>
+                    </div> -->
                 </ul>
-                
             </nav>
         </div>
     </header>
@@ -125,7 +120,7 @@
                             <h1 class="txt-der">¡Adquiere tu Chip  corporativo todo ilimitado!</h1>
                             <p class="txt-der">Sin evaluaciones Con CHAPA TU PLAN adquiere tu Sim de forma inmediata</p>
                             
-                            <a class="padhor-1-2 border20 bg-verd border3px f-bold w-maxc" href="#modelos">Ver modelos</a>
+                            <a class="padhor-1-2 border20 bg-wsp clr-b f-bold w-maxc" href="#modelos">Ver modelos</a>
                         </div>
                         <div class="flex-c w100 abs-rel-resp posesp-1">
                             <img class="w100 mw-420-resp zindex1 f-gs1-resp opacity-15-resp" src="./img/showingphone.webp" alt="">
@@ -157,7 +152,7 @@
                                     <p>participa de sorteos y gana premios mensuales</p>
                                 </li>
                             </ul>
-                            <a class="padhor-1-2 border20 bg-verd border3px f-bold w-maxc" href="#modelos">Ver modelos</a>
+                            <a class="padhor-1-2 border20 bg-wsp clr-b f-bold w-maxc" href="#modelos">Ver modelos</a>
                         </div>
                         <div class="rel flex-c w100 sinover border-abajo h-fit">
                             <div class="mw-320 aspect-1 bg-g2 h320 bordercircular abs"></div>

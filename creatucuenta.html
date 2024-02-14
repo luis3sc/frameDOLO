@@ -7,23 +7,33 @@
     <link rel="stylesheet" href="./css/frame.css">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
-<body>
-    <header class="bg-g1  w100">
+<body class="rel">
+    <section class="h-2em bg-g4  ">
+        <div class="container flex-jend padhor-1 flex-a mgauto h100">
+            <li class="h100 border-hor1px brdclr-g1">
+                <a class="h100 w100 padhor-1 flex-a clr-g1 clr-hover-1" href="login.html">Mi cuenta</a>
+            </li>
+            <li class="h100 border-hor1px brdclr-g1">
+                <a class="h100 w100 padhor-1 flex-a clr-g1 clr-hover-1" href="login.html">Ingresar</a>
+            </li>
+        </div>
+        
+    </section>
+    <header class="bg-b w100 sticky zindex3 top0 lef0 bx-bot">
         <div class="container padhor-1 w100 mgauto">
-            <nav class="gap1">
+            <nav class="gap1 rel">
                 <div class="menu-icons">
                     <i class="icon ion-md-menu clr-n"></i>
                     <i class="icon ion-md-close"></i>
                 </div>
-                <a href="index.html" class="logo padding05 flex">
-                    <img src="./img/LOGO.png" alt="">
+                <a href="index.html" class="logo padding05 flex-centro">
+                    <img class="h100" src="./img/LOGO.png" alt="">
                 </a>
                 <ul class="nav-list w100 flex-spacebetween mayus f-bold">
                     <div class="flex-c-resp gap1 flex-a clr-n">
                         <li class="rel">
                             <a href="index.html">Inicio</a>
                         </li>
-                        
                         <li class="rel">
                             <a href="premios.html">Premios</a>
                         </li>
@@ -31,22 +41,14 @@
                             <a href="ganadores.html">Ganadores</a>
                         </li>
                     </div>
-                    <div class="flex-c-resp gap1"> 
-                        <li class="hidden move-right btn flex-centro border3px brdclr-n f-bold w-maxc padhor-1-2 border20">
-                            <a href="login.html">Iniciar Sesión</a>
-                            
-                        </li>
-                        <li class="hidden move-right btn flex-centro border3px bg-verd  brdclr-n f-bold w-maxc padhor-1-2 border20">
-                            <a href="crearcuenta.html">Suscribete</a>
-                        </li>
+                    <!-- <div class="flex-c-resp gap1"> 
                         <li class="mw-ico-3 bg-1 bordercircular flex-centro">
                             <a href="#" class="w100 h100">
                                 <img src="" alt="">
                             </a>
                         </li>
-                    </div>
+                    </div> -->
                 </ul>
-                
             </nav>
         </div>
     </header>

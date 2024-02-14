@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/frame.css">
+        <style>
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            background: #ffe8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .testimonial{
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+        }
+        .testimonial-text{
+            width: 100%;
+            height: 350px;
+            position: relative;
+        }
+        .user-text{
+            width: 80%;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        .user-text.active-text{
+            display: block;
+            animation: moveup 0.5s linear forwards;
+        }
+        .user-pic.active-pic{
+            width: 100px;
+            border: 3px solid #ff0058;
+        }
+        @keyframes moveup{
+            0%{
+                opacity: 0.15;
+                margin-top: 25px;
+            }
+            100%{
+                opacity: 1;
+                margin-top: 0px;
+            }
+        }
+        .user-text .fas{
+            font-size: 30px;
+            margin-bottom: 50px;
+            margin-top: 20px;
+        }
+        .user-text span{
+            display: block;
+            font-size: 13px;
+            margin-top: 70px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .testimonial-pic{
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .user-pic{
+            width: 65px;
+            padding: 5px;
+            border-radius: 50%;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Comentario de personaje 1 agradable sobre la empresa o servicio que ofrecemos al publico</p>
+                    <span>Dolores Rojas</span>
+                </div>
+                <div class="user-text active-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Comentario de personaje 2 agradable sobre la empresa o servicio que ofrecemos al publico</p>
+                    <span>Luis Enrique Melchor</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Comentario de personaje 3 agradable sobre la empresa o servicio que ofrecemos al publico</p>
+                    <span>Rosita de Espinar Rojas</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Comentario de personaje 4 agradable sobre la empresa o servicio que ofrecemos al publico</p>
+                    <span>Valentina Miles M</span>
+                </div>
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Comentario de personaje 5 agradable sobre la empresa o servicio que ofrecemos al publico</p>
+                    <span>Anderson M</span>
+                </div>
+            </div>
+            <div class="testimonial-pic w100 overhor">
+                <img src="./img/user1.png" alt="" class="user-pic" onclick="showReview()">
+                <img src="./img/user2.png" alt="" class="user-pic active-pic" onclick="showReview()">
+                <img src="./img/user3.png" alt="" class="user-pic" onclick="showReview()">
+                <img src="./img/user4.png" alt="" class="user-pic" onclick="showReview()">
+                <img src="./img/user5.png" alt="" class="user-pic" onclick="showReview()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let userTexts = document.getElementsByClassName("user-text");
+        let userPics = document.getElementsByClassName("user-pic");
+
+        function showReview(){
+            for(userPic of userPics){
+                userPic.classList.remove("active-pic");
+            }
+            for(userText of userTexts){
+                userText.classList.remove("active-text");
+            }
+            let i = Array.from(userPics).indexOf(event.target);
+
+            userPics[i].classList.add("active-pic");
+            userTexts[i].classList.add("active-text");
+        }
+
+    </script>
+</body>
+</html>

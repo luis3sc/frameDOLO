@@ -8,6 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <title>Inicio</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/frame.css">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <style>
@@ -49,11 +50,28 @@
     width: 100%;
     aspect-ratio: 16 / 9;
 }
+.user-text.active-text {
+            display: block;
+        }
+        .user-pic.active-pic {
+            width: 80px;
+            border: 3px solid #ff0058;
+        }
+        .user-pic {
+            width: 65px;
+        }
     </style>
 </head>
 <body>
     <!-- estrutctura general -->
-    <section class="h-2em bg-g4"></section>
+    <section class="h-2em bg-g4  ">
+        <div class="container flex-jend padhor-1 gap1 flex-a mgauto h100">
+            <li class="h80">
+                <a class="border3px bg-verd brdclr-n f-bold h100 w100 padhor-1 flex-a border05" href="login.html">Ingresar</a>
+            </li>
+        </div>
+        
+    </section>
     <header class="bg-b w100">
         <div class="container padhor-1 w100 mgauto">
             <nav class="gap1 rel">
@@ -62,7 +80,7 @@
                     <i class="icon ion-md-close"></i>
                 </div>
                 <a href="index.html" class="logo padding05 flex-centro">
-                    <img class="w80" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
+                    <img class="h100" src="./img/LOGO.png" alt="">
                 </a>
                 <ul class="nav-list w100 flex-spacebetween mayus f-bold">
                     <div class="flex-c-resp gap1 flex-a clr-n">
@@ -77,14 +95,14 @@
                         </li>
                     </div>
                     <div class="flex-c-resp gap1"> 
-                        <li class="move-right btn flex-centro border3px brdclr-n f-bold w-maxc padhor-1-2 border20">
+                        <!-- <li class="move-right btn flex-centro border3px brdclr-n f-bold w-maxc padhor-1-2 border20">
                             <a href="login.html">Iniciar Sesión</a>
                             
                         </li>
-                        <li class="move-right btn flex-centro border3px bg-verd  brdclr-n f-bold w-maxc padhor-1-2 border20">
+                        <li class="move-right btn flex-centro border3px bg-verd brdclr-n f-bold w-maxc padhor-1-2 border20">
                             <a href="crearcuenta.html">Suscribete</a>
-                        </li>
-                        <li class="hidden mw-ico-3 bg-1 bordercircular flex-centro">
+                        </li> -->
+                        <li class="mw-ico-3 bg-1 bordercircular flex-centro">
                             <a href="#" class="w100 h100">
                                 <img src="" alt="">
                             </a>
@@ -97,31 +115,30 @@
     </header>
     <main class="h-maxc bg-b ">
         <!-- Columna 5 - 2 Columna -->
-        <section class="padsup-2 mgauto bg-g1" alt="banner">
-            <div class="padhor-1 ">
+        <section class="mgauto bg-g1 sinover rel flex-c minh-portada" alt="banner">
+            <div class="padhor-1 flex-a">
                 <!-- contenido -->
                 <div class="w100 mw-72 mgauto border20">
-                    <div class="padsup-2 gridcol1-2-resp gapresp1">
+                    <div class="gridcol1-2-resp plccentr gapresp1">
                     <!-- contenido Banner -->
-                        <div class="flex-colum flex-c mgauto gap1 w100 mw-580 txt-centro">
+                        <div class="flex-colum flex-c mgauto gap1 w100 mw-580 txt-centro zindex2">
                             <h1 class="txt-der">¡Adquiere tu Chip  corporativo todo ilimitado!</h1>
                             <p class="txt-der">Sin evaluaciones Con CHAPA TU PLAN adquiere tu Sim de forma inmediata</p>
                             
                             <a class="padhor-1-2 border20 bg-verd border3px f-bold w-maxc" href="#modelos">Ver modelos</a>
                         </div>
-                        <div class="rel flex-c none-resp w100">
-                            <div class="mw-320 aspect-1 bg-1 h320 bordercircular abs"></div>
-                            <img class="w100 mw-420 zindex1" src="./img/showingphone.webp" alt="">
+                        <div class="flex-c w100 abs-rel-resp posesp-1">
+                            <img class="w100 mw-420-resp zindex1 f-gs1-resp opacity-15-resp" src="./img/showingphone.webp" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="padsup-2 mgauto sinover" alt="banner2">
+        <section class="padsup-3 mgauto sinover minh-100 flex-centro" alt="banner2">
             <div class="padhor-1 ">
                 <!-- contenido -->
                 <div class="w100 mw-72 mgauto border20">
-                    <div class="padsup-2 gridcol1-2-resp gapresp1">
+                    <div class="padsup-2 gridcol1-2-resp plccentr gapresp1">
                     <!-- contenido Banner -->
                         <div class="flex-colum flex-c mgauto gap1 w100 mw-580 txt-centro">
                             <h1 class="txt-der">Con Chapa tu plan  estrena SIM nuevo todo ilimitado desde los 40soles !</h1>
@@ -142,16 +159,16 @@
                             </ul>
                             <a class="padhor-1-2 border20 bg-verd border3px f-bold w-maxc" href="#modelos">Ver modelos</a>
                         </div>
-                        <div class="rel flex-c w100">
-                            <div class="mw-320 aspect-1 bg-1 h320 bordercircular abs"></div>
-                            <img class="w100 mw-420 zindex1" src="./img/celularfeliz.webp" alt="">
+                        <div class="rel flex-c w100 sinover border-abajo h-fit">
+                            <div class="mw-320 aspect-1 bg-g2 h320 bordercircular abs"></div>
+                            <img class="w100 mw-420-resp zindex1" src="./img/celularfeliz.webp" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="padsup-3 mgauto bg-g1" id="">
-            <div class="padhor-1 clr-1 txt-centro mw-52 mgauto flex-colum gap1">
+            <div class="padhor-1 clr-1 txt-centro mw-72 mgauto flex-colum gap1">
                 <p>Principales marcas con la que trabajamos</p>
                 <div class="flex-w flex-centro mgauto gap1">
                     <div class="mw-150 padding05">
@@ -171,15 +188,42 @@
             </div>
         </section>
         <section class="padvert3 mgauto bg-b" id="">
-            <div class="padhor-1 clr-1 txt-centro mw-52 mgauto flex-colum gap1">
+            <div class="padhor-1 clr-1 txt-centro mw-1080 mgauto flex-colum gap1">
                 <h2 class="">Miles de peruanos ya tienen su SIM Corporativo con Chapa tu plan</h2>
-                <p>Tienen una amplia facilidad de pagos e increíbles premios mensuales</p>
-                <div class="flex-w flex-centro gap1">
-                    <div class="mw-ico-5 aspect-1 bg-1 bordercircular clr-b flex-centro">s</div>
-                    <div class="mw-ico-5 aspect-1 bg-1 bordercircular clr-b flex-centro">s</div>
-                    <div class="mw-ico-5 aspect-1 bg-1 bordercircular clr-b flex-centro">s</div>
-                    
+                
+                <div class="testimonial w100">
+                    <div class="swiper-container testimonial-text sinover rel padsup-2 w100">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="user-text w100 txt-centro active-text">
+                                    <p>Comentario de personaje 1 agradable sobre la empresa o servicio que ofrecemos al público</p>
+                                    <span class="mayus mgtp2 block">Dolores Rojas</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="user-text w100 txt-centro ">
+                                    <p>Comentario de personaje 2 agradable sobre la empresa o servicio que ofrecemos al público</p>
+                                    <span class="mayus mgtp2 block">Luis Enrique Melchor</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="user-text w100 txt-centro">
+                                    <p>Comentario de personaje 3 agradable sobre la empresa o servicio que ofrecemos al público</p>
+                                    <span class="mayus mgtp2 block">Rosita de Espinar Rojas</span>
+                                </div>
+                            </div>
+                            <!-- Agrega más slides según sea necesario -->
+                        </div>
+                    </div>
+                    <div class="testimonial-pic mgtp1 w100 overhor flex-centro gap1">
+                        <img src="./img/user1.png" alt="" class="user-pic pointer padding05 bordercircular active-pic" onclick="showReview(0)">
+                        <img src="./img/user2.png" alt="" class="user-pic pointer padding05 bordercircular" onclick="showReview(1)">
+                        <img src="./img/user3.png" alt="" class="user-pic pointer padding05 bordercircular" onclick="showReview(2)">
+                        <!-- Agrega más imágenes según sea necesario -->
+                    </div>
                 </div>
+
+
             </div>
         </section>
         <section class="padvert3 mgauto " id="">
@@ -244,8 +288,39 @@
     <!-- modals -->
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/countdown.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var testimonialSwiper = new Swiper('.testimonial-text', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 2000, // Retraso de 2 segundos entre los sliders
+                },
+                loop: true, // Para activar el bucle
+            });
+    
+            var userPics = document.querySelectorAll('.user-pic');
+    
+            function showReview(index) {
+                userPics.forEach(function (userPic, i) {
+                    userPic.classList.remove("active-pic");
+    
+                    if (i === index) {
+                        userPic.classList.add("active-pic");
+                        testimonialSwiper.slideTo(index);
+                    }
+                });
+            }
+    
+            userPics.forEach(function (userPic, index) {
+                userPic.addEventListener('click', function () {
+                    showReview(index);
+                });
+            });
+        });
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
     <script>

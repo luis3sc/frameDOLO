@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/frame.css">
+    <style>
+        .user-text.active-text {
+            display: block;
+        }
+        .user-pic.active-pic {
+            width: 80px;
+            border: 3px solid #ff0058;
+        }
+        .user-pic {
+            width: 65px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w100 flex-centro">
+        <div class="testimonial mw-920 w100 mgauto">
+            <div class="swiper-container testimonial-text sinover rel padsup-2 w100">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="user-text w100 txt-centro active-text">
+                            <p>Comentario de personaje 1 agradable sobre la empresa o servicio que ofrecemos al público</p>
+                            <span class="mayus mgtp2 block">Dolores Rojas</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="user-text w100 txt-centro ">
+                            <p>Comentario de personaje 2 agradable sobre la empresa o servicio que ofrecemos al público</p>
+                            <span class="mayus mgtp2 block">Luis Enrique Melchor</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="user-text w100 txt-centro">
+                            <p>Comentario de personaje 3 agradable sobre la empresa o servicio que ofrecemos al público</p>
+                            <span class="mayus mgtp2 block">Rosita de Espinar Rojas</span>
+                        </div>
+                    </div>
+                    <!-- Agrega más slides según sea necesario -->
+                </div>
+            </div>
+            <div class="testimonial-pic mgtp1 w100 overhor flex-a gap1">
+                <img src="./img/user1.png" alt="" class="user-pic pointer padding05 bordercircular active-pic" onclick="showReview(0)">
+                <img src="./img/user2.png" alt="" class="user-pic pointer padding05 bordercircular" onclick="showReview(1)">
+                <img src="./img/user3.png" alt="" class="user-pic pointer padding05 bordercircular" onclick="showReview(2)">
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var testimonialSwiper = new Swiper('.testimonial-text', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 2000, // Retraso de 2 segundos entre los sliders
+                },
+                loop: true, // Para activar el bucle
+            });
+    
+            var userPics = document.querySelectorAll('.user-pic');
+    
+            function showReview(index) {
+                userPics.forEach(function (userPic, i) {
+                    userPic.classList.remove("active-pic");
+    
+                    if (i === index) {
+                        userPic.classList.add("active-pic");
+                        testimonialSwiper.slideTo(index);
+                    }
+                });
+            }
+    
+            userPics.forEach(function (userPic, index) {
+                userPic.addEventListener('click', function () {
+                    showReview(index);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

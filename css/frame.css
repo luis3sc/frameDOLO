@@ -1,10 +1,10 @@
 :root{
   /*Paleta de colores*/
-  --primario: #4f1900;
-  --secundario: #fff18d;
-  --terciario: #edf2f4;
-  --cuaternario: #8d99ae;
-  --quintenario: #2b2d42;
+  --primario: #f0f7e6;
+  --secundario: #aed67a;
+  --terciario: #628c2b;
+  --cuaternario: #8ac440;
+  --quintenario: #6fa031;
   /*Colores general*/
   --negro: #000;
   --blanco: #fff;
@@ -256,6 +256,9 @@ border-color: var(--gris3) !important;
 .brdclr-ama{
   border-color: var(--amar) !important;
 }
+.brdclr-wsp{
+  border-color: var(--wsp) !important;
+}
 /*FONTS*/
 /*FONTS*/
 /*FONTS*/
@@ -279,6 +282,9 @@ p{
 }
 .ftsz-1_5, .fs-1-5{
   font-size: var(--sz1-5);
+}
+.ftsz-2{
+  font-size: var(--sz2);
 }
 
 button,.txtbtn{

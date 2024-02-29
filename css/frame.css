@@ -1,6 +1,6 @@
 :root{
   /*Paleta de colores*/
-  --primario: #f0f7e6;
+  --primario: #9bf025;
   --secundario: #aed67a;
   --terciario: #628c2b;
   --cuaternario: #8ac440;
@@ -275,7 +275,7 @@ p{
   font-size: var(--p);
 }
 .ftsz0_9{
-  font-size: .9em;
+  font-size: .9rem;
 }
 .ftsz-1_4{
   font-size: 1.4rem;
@@ -357,7 +357,7 @@ width: fit-content;
 .w-maxc{
   width: max-content;
 }
-.w100{
+.w100,.iti{
   width: 100%;
 }
 .w90{
@@ -1508,7 +1508,14 @@ input[type=checkbox]{
   width: 20px;
   height: 20px;
 }
+.inputhover:focus {
+  border-color: var(--primario) !important;
+}
+.inputhover:focus + label {
+  color: red;
+}
 /*other*/
+/* tt  */
 @media screen and (max-width: 850px) {
   .nav-list {
       display: none;

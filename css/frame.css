@@ -357,7 +357,7 @@ width: fit-content;
 .w-maxc{
   width: max-content;
 }
-.w100,.iti{
+.w100, .iti--allow-dropdown{
   width: 100%;
 }
 .w90{
@@ -595,7 +595,7 @@ border-radius: .8em .8em 0 0;
 /*LAYOUT*/
 /*FlexBox*/
 /* flex */
-.flex, .flex-c, .flex-a,.flex-colum,.flex-row, .flex-centro,.flex-spacebetween,.flex-colum-r,.flex-spacearound,.flex-end,.flex-spaceevenly,.flex-c-resp,.flex-colum-rev-resp,.flex-none,.flex-w,.flex-colum-row-resp,.flex-jend{
+.flex, .flex-c, .flex-a,.flex-colum,.flex-row, .flex-centro,.flex-spacebetween,.flex-colum-r,.flex-spacearound,.flex-end,.flex-spaceevenly,.flex-c-resp,.flex-colum-rev-resp,.flex-none,.flex-w,.flex-colum-row-resp,.flex-jend,.flex-colum-rev{
   display: flex;
 }
 .flex-c, .flex-centro{
@@ -616,7 +616,7 @@ border-radius: .8em .8em 0 0;
 .flex-w{
   flex-wrap: wrap;
 }
-.flex-colum-rev-resp{
+.flex-colum-rev-resp, .flex-colum-rev{
   flex-direction: column-reverse;
 }
 .flex-spacebetween{
@@ -896,6 +896,9 @@ place-items: center;
 }
 .paddingespp{
     padding-right: 80px
+}
+.paddinglef-5_8{
+  padding-left: 5.8em;
 }
 .paddingbot{
   padding-bottom: var(--sz1);
@@ -1508,11 +1511,12 @@ input[type=checkbox]{
   width: 20px;
   height: 20px;
 }
-.inputhover:focus {
+/* input cuando esta focus cambia de color */
+.inputbrdr-1:focus {
   border-color: var(--primario) !important;
 }
-.inputhover:focus + label {
-  color: red;
+.inputbrdr-1:focus + label {
+  color: var(--gris4);
 }
 /*other*/
 /* tt  */

@@ -1,10 +1,11 @@
 :root{
+  /*COLORES*/
   /*Paleta de colores*/
-  --primario: #9bf025;
-  --secundario: #aed67a;
-  --terciario: #628c2b;
-  --cuaternario: #8ac440;
-  --quintenario: #6fa031;
+  --primario: #B674F7;
+  --secundario: #9734FC;
+  --terciario: #7615D6;
+  --cuaternario: #6206BF;
+  --quintenario: #4C1485;
   /*Colores general*/
   --negro: #000;
   --blanco: #fff;
@@ -13,26 +14,37 @@
   --amar : #ffd900;
   --verd : #02ff0f;
   /*Grises*/
-  --gris1: #e7e7e7;
-  --gris2: #cecece;
-  --gris3: #a1a1a1;
-  --gris4: #666666;
+  --gris1: #f7f7f7;
+  --gris2: #e7e7e7;
+  --gris3: #cecece;
+  --gris4: #a1a1a1;
+  --gris5: #666666;
+  --gris6: #414141;
   /* Color especiales*/
   --wsp: #2ea100;
   --yape: #be00cf;
   --plin: #34d0db;
 
+  /*TIPOGRAFIA Y FONTS*/
   /*fontsizes*/
-  --h1: 2em;
-  --h2:  clamp(2.75rem, 1.1346rem + 0.5128vw, 2.50rem);
-  --h3:  clamp(1.5rem, 0.8846rem + 0.5128vw, 1.5rem);
-  --p:  clamp(1.125rem, 0.7596rem + 0.5128vw, 1.375rem);
-  --txtbtn: clamp(0.9rem, 0.6346rem + 0.5128vw, 1.25rem);
+  --h1: clamp(3.25rem, 3.1rem + 0.75vw, 4rem);
+  --h2: clamp(3rem, 3rem + 0vw, 3rem);
+  --h3: clamp(2.25rem, 2.25rem + 0vw, 2.25rem);
+  --h4: clamp(2rem, 2rem + 0vw, 2rem);
+  --h5: clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
+  --h6: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);;
+  --p1: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+  --p2: clamp(1rem, 1rem + 0vw, 1rem);
+  --p:  clamp(1rem, 0.9rem + 0.5vw, 1.025rem);
+  --txtbtn: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+  --caption: clamp(0.75rem, 0.75rem + 0vw, 0.95rem);
+  --overline: clamp(0.625rem, 0.625rem + 0vw, 0.825rem);
+  
   /*fontweight*/
   --wg-light: 200;
   --wg-regular: 400;
   --wg-bold: 600;
-
+  --wg-extrabold: 900;
   /*typo*/
   --line-height: 1.5; 
 
@@ -47,7 +59,7 @@
   --sz4: 4em;
   --sz3: 3em;
   --sz2:2em; /*32px*/
-  --sz1-75: 1.75em;
+  --sz1-75: 1.75rem;
   --sz1-5:1.5em; /*24px*/
   --sz1-25: 1.25em;
   --sz1: 1em; /*16px*/
@@ -120,6 +132,9 @@ main,.main-p{
 .bg-4{
   background-color: var(--cuaternario);
 }
+.bg-5{
+  background-color: var(--quintenario);
+}
 .bg-g1{
   background-color: var(--gris1);
 }
@@ -131,6 +146,12 @@ main,.main-p{
 }
 .bg-g4{
   background-color: var(--gris4);
+}
+.bg-g5{
+  background-color: var(--gris5);
+}
+.bg-g6{
+  background-color: var(--gris6);
 }
 .bg-n{
   background-color: var(--negro);
@@ -186,6 +207,15 @@ main,.main-p{
 }
 .clr-g3{
   color: var(--gris3);
+}
+.clr-g4{
+  color: var(--gris4);
+}
+.clr-g5{
+  color: var(--gris5);
+}
+.clr-g6{
+  color: var(--gris6);
 }
 .clr-verd{
   color: var(--verd);
@@ -267,12 +297,46 @@ h1{
 }
 h2{
   font-size: var(--h2);
+  line-height: calc( 1.15 * var(--h2));
 }
 h3{
   font-size: var(--h3);
+  line-height: calc( 1.15 * var(--h3));
+}
+h4{
+  font-size: var(--h4);
+  line-height: calc( 1.15 * var(--h4));
+}
+h5{
+  font-size: var(--h5);
+  line-height: calc( 1.15 * var(--h5));
+}
+h6{
+  font-size: var(--h6);
+  line-height: calc( 1.15 * var(--h6));
 }
 p{
   font-size: var(--p);
+  line-height: calc( 1.5 * var(--p));
+}
+.p1{
+  font-size: var(--p1);
+  line-height: calc( 1.5 * var(--p1));
+}
+.p2{
+  font-size: var(--p2);
+  line-height: calc( 1.5 * var(--p2));
+}
+.caption{
+  font-size: var(--caption);
+  line-height: calc( 1.5 * var(--caption));
+}
+.overline{
+  font-size: var(--overline);
+  line-height: calc( 1.5 * var(--overline));
+}
+.btn-text{
+  font-size: var(--txtbtn);
 }
 .ftsz0_9{
   font-size: .9rem;
@@ -306,6 +370,9 @@ font-size: .8em;
 }
 .f-bold{
   font-weight: var(--wg-bold);
+}
+.f-extrabold{
+  font-weight: var(--wg-extrabold);
 }
 /* Mayuscula, Minuscula*/
 .mayus{
@@ -342,7 +409,7 @@ font-size: .8em;
   line-height: 1;
 }
 /*Widths*/
-.wifc{
+.wifc,.w-fit{
 width: fit-content;
 }
 .winh{
@@ -680,7 +747,7 @@ grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 /* 3 columnas */
 .grid3c {
-grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
 grid-gap: .1em;
 }
 /*Desktop 4 col - Mob 2 col*/
@@ -1597,7 +1664,6 @@ input[type=checkbox]{
   :root{
       --mobile:100vh;
       --navbarmobile:0vh;
-      --h1: 3.2em;
   }
   main{
       height: auto;

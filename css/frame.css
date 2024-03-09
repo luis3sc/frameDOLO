@@ -36,7 +36,7 @@
   --p1: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
   --p2: clamp(1rem, 1rem + 0vw, 1rem);
   --p:  clamp(1rem, 0.9rem + 0.5vw, 1.025rem);
-  --txtbtn: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+  --txtbtn: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
   --caption: clamp(0.75rem, 0.75rem + 0vw, 0.95rem);
   --overline: clamp(0.625rem, 0.625rem + 0vw, 0.825rem);
   
@@ -408,6 +408,29 @@ font-size: .8em;
 .lnh-1{
   line-height: 1;
 }
+/*Buttons */
+.btn-sm{
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+}
+.btn-md{
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+}
+.btn-g{
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+}
+.btn-gen{
+  width: clamp(7.5rem, 6rem + 7.5vw, 15rem);;
+  height: clamp(2.5rem, 2.25rem + 1.25vw, 3.75rem);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+}
+
+/*Buttons */
 /*Widths*/
 .wifc,.w-fit{
 width: fit-content;

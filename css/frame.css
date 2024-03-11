@@ -413,7 +413,10 @@ font-size: .8em;
   background: var(--secundario);
   color: var(--blanco);
 }
-
+.btn-hover:hover>img{
+  filter: invert(1);
+}
+/*Tamaño botones*/
 .btn-sm{
   width: 120px;
   height: 40px;

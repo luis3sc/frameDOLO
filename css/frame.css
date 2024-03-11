@@ -1,9 +1,9 @@
 :root{
   /*COLORES*/
   /*Paleta de colores*/
-  --primario: #B674F7;
+  --primario: #7615D6;
   --secundario: #9734FC;
-  --terciario: #7615D6;
+  --terciario: #B674F7;
   --cuaternario: #6206BF;
   --quintenario: #4C1485;
   /*Colores general*/
@@ -409,25 +409,31 @@ font-size: .8em;
   line-height: 1;
 }
 /*Buttons */
+.btn-hover:hover{
+  background: var(--secundario);
+  color: var(--blanco);
+}
+
 .btn-sm{
   width: 120px;
   height: 40px;
   font-size: 16px;
 }
 .btn-md{
-  width: 120px;
-  height: 40px;
+  width: 180px;
+  height: 50px;
   font-size: 18px;
 }
 .btn-g{
-  width: 120px;
-  height: 40px;
+  width: 240px;
+  height: 60px;
   font-size: 20px;
 }
 .btn-gen{
   width: clamp(7.5rem, 6rem + 7.5vw, 15rem);;
   height: clamp(2.5rem, 2.25rem + 1.25vw, 3.75rem);
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  
 }
 
 /*Buttons */
@@ -1532,10 +1538,6 @@ ion-icon {
   transition: background-color 650ms;
 }
 
-.btn:hover {
-  color: #eb3007;
-  background-color: var(--verd);
-}
 
 li.move-right {
   line-height: initial;

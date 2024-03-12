@@ -42,7 +42,8 @@
         text-align: start;
     }
     .nav_list_menu:hover .dropdown {
-        height: 100%;
+        
+        height: calc(100svh - 50svh);
         transition: all 0.5s ease-in;
     }
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/frame.css">
+    <style>.modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 100;
+      }
+      
+      .modal.active {
+        display: block;
+      }
+      </style>
+</head>
+<body>
+    <header>
+        <p>Header</p>
+    </header>
+    <div class="padsup-2 bg-1 main-header flex-centro">
+        <div class="padhor-1 ">
+            <p>Main principal </p>
+        </div>
+    </div>
+    <a href="#" trigger-button data-target="#modal">Abrir modal</a>
+
+<div id="modal" class="modal">
+  <h2>Título del modal</h2>
+  <p>Contenido del modal</p>
+  <button type="button">Cerrar modal</button>
+</div>
+
+</body>
+</html>

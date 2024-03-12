@@ -96,7 +96,7 @@ list-style: none;
 /*body{
   height: calc( var(--mobile) - var(--navbarmobile) );/* 100svh en mobile 
 } */
-header{
+header,.header{
   height: var(--header); 
 }
 .nav-mobile{
@@ -248,7 +248,7 @@ main,.main-p{
   fill: var(--negro);
 }
 /*Degradados*/
-.active{
+/* .active{
 background-color: var(--primario);
 color: var(--blanco);
 }
@@ -257,7 +257,7 @@ color: var(--primario);
 border-color: var(--primario);
 border-bottom: 1px solid;
 font-weight: bold;
-}
+} */
 /*Color Bordes*/
 .brdclr-1{
   border-color: var(--primario) !important;
@@ -733,7 +733,7 @@ justify-content: flex-end;
 .flex-ini{
 align-items: flex-start;
 }
-.d-resp{
+.d-resp,.block-none{
   display: block;
 }
 /* flex para columnas */
@@ -765,14 +765,12 @@ align-items: flex-start;
 }
 .grid2 {
 grid-template-columns: repeat(auto-fit, minmax(45px, 60px));
-grid-gap: .5em;
 }
 .grid2colum{
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .grid2c,.grid-flxc{
 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-grid-gap: .4em;   
 }
 .grid3 {
 grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -780,7 +778,6 @@ grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 /* 3 columnas */
 .grid3c {
 grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-grid-gap: .1em;
 }
 /*Desktop 4 col - Mob 2 col*/
 
@@ -1506,10 +1503,6 @@ nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.logo {
-  height: 5rem;
-}
-
 ion-icon {
   font-size: 1.4rem;
 }
@@ -1731,7 +1724,7 @@ input[type=checkbox]{
   .botnav{
     bottom: 0;
   }
-  .fxd-resp,.flex-none,.d-resp{
+  .fxd-resp,.flex-none,.d-resp,.block-none{
     display: none;
   }
   /*GRID*/

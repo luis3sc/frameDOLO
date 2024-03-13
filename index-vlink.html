@@ -19,12 +19,12 @@
           </a>
           <ul class="nav_menu none-resp bg-b w100 gap2">
             <li class="nav_list gap2">
-              <a href="#!" class="nav_link gap1 flex clr-n">
+              <a href="#!" class="nav_link gap1 flex clr-n clr-hover-1">
                 <span>Inicio</span>
               </a>
             </li>
             <li class="nav_list gap2 nav_list_menu">
-              <a href="#!" class="nav_link gap1 flex clr-n">
+              <a href="#!" class="nav_link gap1 flex clr-n clr-hover-1">
                 <span>Productos</span>
                 <ion-icon name="chevron-down-outline"></ion-icon>
               </a>
@@ -203,12 +203,12 @@
               </div>
             </li>
             <li class="nav_list gap2">
-              <a href="#!" class="nav_link gap1 flex clr-n">
+              <a href="#!" class="nav_link gap1 flex clr-n clr-hover-1">
                 <span>Planes</span>
               </a>
             </li>
             <li class="nav_list gap2">
-              <a href="#!" class="nav_link gap1 flex clr-n">
+              <a href="#!" class="nav_link gap1 flex clr-n clr-hover-1">
                 <span>Blog</span>
               </a>
             </li>
@@ -321,8 +321,8 @@
       <div class="padhor-1 mw-1080 w100 flex-colum">
         <h2 class="clr-g6">Explora nuestros Modelos</h2>
         <p>para diferentes Neogcios</p>
-        
-        <section class="sinover flex-colum gap1 mgtp">
+        <!-- seccion para mobil -->
+        <section class="sinover flex-colum gap1 mgtp flex-none">
           <div class="accordion bg-b">
             <input class="abs zindex-1 opacity0" type="radio" name="accordion-2" id="rd1" checked>
             <label for="rd1" class="tab__label flex-spacebetween padding1 clr-1 f-bold">Carwash</label>
@@ -364,6 +364,39 @@
               </div>
             </div>
         </section>
+        <!-- seccion para desktop -->
+        <section class="none-resp gap1 mgtp2">
+          <ul class="flex-1 w100 zindex1">
+            <li id="li-img1" class="activo borderbottom1 brdclr-g3">
+              <button id="btn-img1" class="btn-img bg-g2 padsup-2 w100 flex-row flex-spacebetween">
+                <p>Carwash</p>
+                <ion-icon name="arrow-forward-outline"></ion-icon> 
+              </button>
+            </li>
+            <li id="li-img2" class="borderbottom1 brdclr-g3">
+              <button id="btn-img2" class="btn-img bg-g2 padsup-2 w100 flex-row flex-spacebetween">
+                <p>Financiera</p>
+                <ion-icon name="arrow-forward-outline"></ion-icon> 
+              </button>
+            </li>
+            <li id="li-img3" class="borderbottom1 brdclr-g3">
+              <button id="btn-img3" class="btn-img bg-g2 padsup-2 w100 flex-row flex-spacebetween">
+                <p>Restaurant</p>
+                <ion-icon name="arrow-forward-outline"></ion-icon> 
+              </button>
+            </li>
+            <li id="li-img4" class="">
+              <button id="btn-img4" class="btn-img bg-g2 padsup-2 w100 flex-row flex-spacebetween">
+                <p>Spa</p>
+                <ion-icon name="arrow-forward-outline"></ion-icon> 
+              </button>
+            </li>
+          </ul>
+          <div class="w100 flex-2 grid2col padhor-1 gap1">
+            <img class="mw-600 w100" id="img-principal" src="./img/modelo-1.png" alt="Imagen principal">
+            <img class="mw-600 w100" id="img-secundaria" src="./img/modelos-2.png" alt="Imagen secundaria">
+          </div>
+        </section>
       </div>
     </div>
     <div class="main-full padsup-2 bg-g1 flex-centro">
@@ -385,5 +418,43 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="./js/script.js"></script>
   </body>
+  <script>
+    const imagenes = [
+      {
+       principal: "./img/modelo-1.png",
+       secundaria: "./img/modelos-2.png",
+      },
+      {
+       principal: "./img/iPhone_14_Pro_Max_Space_Black_Pure_Front.png",
+       secundaria: "./img/04-iphone-13-pro-max-1tb-gris-front.png",
+      },
+      {
+       principal: "./img/iphone-12-azul.png",
+       secundaria: "./img/iphone-13-pro-max-3.png",
+      },
+      {
+       principal: "./img/celularfeliz.webp",
+       secundaria: "./img/cel-1.webp",
+      },
+      ];
 
+      const botones = document.querySelectorAll("ul li button");
+      const imgPrincipal = document.getElementById("img-principal");
+      const imgSecundaria = document.getElementById("img-secundaria");
+
+      botones.forEach((boton, indice) => {
+      boton.addEventListener("click", () => {
+       const imagenSeleccionada = imagenes[indice];
+      
+       imgPrincipal.src = imagenSeleccionada.principal;
+       imgSecundaria.src = imagenSeleccionada.secundaria;
+      
+       // Eliminar clase "activo" de todos los botones
+       botones.forEach(boton => boton.parentNode.classList.remove("activo"));
+      
+       // Agregar clase "activo" al botón actual
+       boton.parentNode.classList.add("activo");
+      });
+      });
+ </script>
 </html>

@@ -85,6 +85,7 @@ button, input, a{
 border: none;
 text-decoration: none;
 outline: none;
+background-color: none;
 }
 button, a,.pointer{
 cursor: pointer;
@@ -190,7 +191,7 @@ main,.main-p{
 .clr-n,a{
   color: var(--negro);
 }
-.clr-1{
+.clr-1, li.activo button{
   color: var(--primario) ;
 }
 .clr-2{
@@ -371,7 +372,7 @@ font-size: .8em;
 .f-reg{
   font-weight: var(--wg-regular);
 }
-.f-bold{
+.f-bold, li.activo button{
   font-weight: var(--wg-bold);
 }
 .f-extrabold{

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/frame.css">
+    <style>
+
+
+
+.activo {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.previsualizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.previsualizar img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+li.activo button{
+    color: #007bff;
+}
+    </style>
+</head>
+<body>
+    <h1>Visualizador de imágenes</h1>
+    <div class="flex">
+        <ul>
+          <li id="li-img1" class="activo"><button id="btn-img1" class="btn-img">Carwash</button></li>
+          <li id="li-img2"><button id="btn-img2" class="btn-img">Financiera</button></li>
+          <li id="li-img3"><button id="btn-img3" class="btn-img">Restaurant</button></li>
+          <li id="li-img4"><button id="btn-img4" class="btn-img">Spa</button></li>
+        </ul>
+
+        <div class="previsualizar">
+          <img id="img-principal" src="./img/iphone-12-azul.png" alt="Imagen principal">
+          <img id="img-secundaria" src="./img/iphone-13-pro-max-3.png" alt="Imagen secundaria">
+        </div>
+    </div>
+    <script>
+       const imagenes = [
+  {
+    principal: "./img/iphone-12-azul.png",
+    secundaria: "./img/iphone-13-pro-max-3.png",
+  },
+  {
+    principal: "./img/iPhone_14_Pro_Max_Space_Black_Pure_Front.png",
+    secundaria: "./img/04-iphone-13-pro-max-1tb-gris-front.png",
+  },
+  {
+    principal: "./img/tomarfeliz.webp",
+    secundaria: "./img/showingphone.webp",
+  },
+  {
+    principal: "./img/celularfeliz.webp",
+    secundaria: "./img/cel-1.webp",
+  },
+];
+
+const botones = document.querySelectorAll("ul li button");
+const imgPrincipal = document.getElementById("img-principal");
+const imgSecundaria = document.getElementById("img-secundaria");
+
+botones.forEach((boton, indice) => {
+  boton.addEventListener("click", () => {
+    const imagenSeleccionada = imagenes[indice];
+
+    imgPrincipal.src = imagenSeleccionada.principal;
+    imgSecundaria.src = imagenSeleccionada.secundaria;
+
+    // Eliminar clase "activo" de todos los botones
+    botones.forEach(boton => boton.parentNode.classList.remove("activo"));
+
+    // Agregar clase "activo" al botón actual
+    boton.parentNode.classList.add("activo");
+  });
+});
+
+    </script>
+</body>
+</html>

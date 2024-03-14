@@ -313,7 +313,7 @@
             </div>
             <a class="btn-md mgtp mgauto border05  brdclr-1 border1px btn-hover flex-centro" href="#">
               Registrate Ahora
-          </a>
+            </a>
         </div>
     </div>
     <!-- SECCION MODELOS -->
@@ -399,9 +399,158 @@
         </section>
       </div>
     </div>
-    <div class="main-full padsup-2 bg-g1 flex-centro">
-        <div class="padhor-1">
-            <p>Planes</p>
+    <div class="main-min-full padsup-2 bg-g1 flex-c">
+        <div class="mw-1080 w100 flex-colum">
+            <div class="padhor-1">
+              <h2 class="clr-g6">Nuestros Planes</h2>
+              <p>Eliga el plan que mas se adecua a usted</p>
+            </div>
+            <div class="padhor-1">
+              <select class="padop1 ftsz-1_4 w100 mw-280" id="pais" onchange="cambiarPais()">
+                <option value="peru" selected>Perú (PEN)</option>
+                <option value="mexico">México (USD)</option>
+                <option value="argentina">Argentina (USD)</option>
+                <option value="brasil">Brasil (USD)</option>
+                <option value="ecuador">Ecuador (USD)</option>
+                <option value="bolivia">Bolivia (USD)</option>
+                <option value="venezuela">Venezuela (USD)</option>
+                <option value="colombia">Colombia (USD)</option>
+                <option value="estados_unidos">Estados Unidos (USD)</option>
+              </select>
+            </div>
+            <section class="mgtp">
+              <div class="overhor grid-f-hor-col grid-a-scroll gridscroll-1 gap1 padding-scroll1 contain-paint overscroll-cont scroll-snap-1 touch-a">
+                <!-- precio1 -->
+                <div class="border1px brdclr-g4 border05 padsup-2">
+                  <div class="padhor-1 w100 flex-colum gap1">
+                    <div>
+                    <h3>Gratis</h3>
+                    <p>Experimenta la magia de las
+                      ruletas digitales. ¡Ideal para
+                      pequeños negocios!</p>
+                    </div>
+
+                    <div class="padding1 border1px border05 brdclr-g3 flex-colum gap1 bg-g2">
+                    
+                    <div id="precio1" class="flex gap-5 w100">
+                      <div class="planes w100">
+                        <label>
+                          <input type="radio" name="plan1" value="3" checked>
+                          <div class="w100 padop1 border1px border05">
+                            <p>3 meses</p>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="planes w100">
+                        <label>
+                          <input type="radio" name="plan1" value="12">
+                          <div class="w100 padop1 border1px border05">
+                            <p>12 meses</p>
+                          </div>
+                        </label>
+                      </div>
+                  </div>
+                  <div>
+                    <p class="lnh-1">desde</p>
+                    <span class="simbolo-moneda">S/</span>
+                    <span id="precio1-valor" class="f-bold ftsz-1_5">0.00</span>
+                  </div>
+                    </div>
+
+                    <a class="btn-md w100 mgauto border05  brdclr-1 border1px btn-hover flex-centro" href="#">
+                    Registrate Ahora
+                    </a>
+                    <p class="caption clr-g5 lnh-1">*aplican excesiones si se excede 
+                    el límite de vistas de pagina.
+                      <a class="clr-n" href="#">aprender más</a></p>
+                  </div>
+                </div>
+                <!-- precio2 -->
+                <!-- precio2 -->
+                <div class="border1px brdclr-g4 border05 padsup-2">
+                  <div class="padhor-1 w100 flex-colum gap1">
+                    <div>
+                    <h3>Básico</h3>
+                    <p>Desbloquea más funciones y potencia el marketing de tu negocio.</p>
+                    </div>
+                    <div class="padding1 border1px border05 brdclr-g3 flex-colum gap1">
+                    <div id="precio2" class="flex gap-5 w100">
+                        <div class="planes w100">
+                          <label>
+                            <input type="radio" name="plan2" value="3" checked>
+                            <div class="w100 padop1 border1px border05">
+                              <p>3 meses</p>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="planes w100">
+                          <label>
+                            <input type="radio" name="plan2" value="12">
+                            <div class="w100 padop1 border1px border05">
+                              <p>12 meses</p>
+                            </div>
+                          </label>
+                        </div>
+                    </div>
+                    <div>
+                      <p class="lnh-1">desde</p>
+                      <span class="simbolo-moneda">S/</span>
+                      <span id="precio2-valor" class="f-bold ftsz-1_5">25.00</span>
+                    </div>
+                    </div>
+                    <a class="btn-md w100 mgauto border05  brdclr-1 border1px btn-hover flex-centro" href="#">
+                    Registrate Ahora
+                    </a>
+                    <p class="caption clr-g5 lnh-1">*aplican excesiones si se excede 
+                    el límite de vistas de pagina.
+                    <a class="clr-n" href="#">aprender más</a></p>
+                  </div>
+                </div>
+                <!-- precio3 -->
+                <!-- precio3 -->
+                <div class="border1px brdclr-g4 border05 padsup-2">
+                  <div class="padhor-1 w100 flex-colum gap1">
+                    <div>
+                    <h3>Premium</h3>
+                    <p>Lleva tus campañas al siguiente nivel
+                      con funciones avanzadas.</p>
+                    </div>
+                    <div class="padding1 border1px border05 brdclr-g3 flex-colum gap1 bg-g2">
+                    <div id="precio3" class="flex gap-5 w100">
+                        <div class="planes w100">
+                          <label>
+                            <input type="radio" name="plan3" value="3" checked>
+                            <div class="w100 padop1 border1px border05">
+                              <p>3 meses</p>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="planes w100">
+                          <label>
+                            <input type="radio" name="plan3" value="12">
+                            <div class="w100 padop1 border1px border05">
+                              <p>12 meses</p>
+                            </div>
+                          </label>
+                        </div>
+                    </div>
+                    <div>
+                      <p class="lnh-1">desde</p>
+                      <span class="simbolo-moneda">S/</span>
+                      <span id="precio3-valor" class="f-bold ftsz-1_5">25.00</span>
+                    </div>
+                    </div>
+                    <a class="btn-md w100 mgauto border05  brdclr-1 border1px btn-hover flex-centro" href="#">
+                    Registrate Ahora
+                    </a>
+                    <p class="caption clr-g5 lnh-1">*aplican excesiones si se excede 
+                    el límite de vistas de pagina.
+                    <a class="clr-n" href="#">aprender más</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
         </div>
     </div>
     <div class="main-full padsup-2 bg-g4 flex-centro">
@@ -417,8 +566,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="./js/script.js"></script>
-  </body>
-  <script>
+    <script src="./js/precios.js"></script>
+    <script>
     const imagenes = [
       {
        principal: "./img/modelo-1.png",
@@ -457,4 +606,6 @@
       });
       });
  </script>
+  </body>
+  
 </html>

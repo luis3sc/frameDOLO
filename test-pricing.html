@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/frame.css">
+    <style>
+        body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+.radio-activo {
+  background-color: red;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.precios {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.precios div {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Elige tu país</h1>
+        <select id="pais" onchange="cambiarPais()">
+          <option value="peru" selected>Perú (PEN)</option>
+          <option value="mexico">México (USD)</option>
+          <option value="argentina">Argentina (USD)</option>
+          <option value="brasil">Brasil (USD)</option>
+          <option value="ecuador">Ecuador (USD)</option>
+          <option value="bolivia">Bolivia (USD)</option>
+          <option value="venezuela">Venezuela (USD)</option>
+          <option value="colombia">Colombia (USD)</option>
+          <option value="estados_unidos">Estados Unidos (USD)</option>
+        </select>
+        <div class="precios">
+          <div id="precio1">
+            <div >
+            <p>Plan 3 meses</p>
+            <input type="radio" name="plan1" value="3" checked>
+            </div>
+            <div >
+            <p>Plan 12 meses</p>
+            <input type="radio" name="plan1" value="12">
+            </div>
+            <span class="simbolo-moneda">S/</span><span id="precio1-valor">25.00</span>
+          </div>
+          <div id="precio2">
+            <p>Plan 3 meses</p>
+            <input type="radio" name="plan2" value="3" checked>
+            <p>Plan 12 meses</p>
+            <input type="radio" name="plan2" value="12">
+
+            <span class="simbolo-moneda">S/</span><span id="precio2-valor">50.00</span>
+          </div>
+          <div id="precio3">
+            <p>Plan 3 meses</p>
+            <input type="radio" name="plan3" value="3" checked>
+            <p>Plan 12 meses</p>
+            <input type="radio" name="plan3" value="12">
+            <span class="simbolo-moneda">S/</span><span id="precio3-valor">100.00</span>
+          </div>
+        </div>
+      </div>
+      <script>
+        const TIPO_CAMBIO = {
+  "peru": 1,
+  "mexico": 0.40,
+  "argentina": 0.40,
+  "brasil": 0.40,
+  "ecuador": 0.40,
+  "bolivia": 0.40,
+  "venezuela": 0.40,
+  "colombia": 0.40,
+  "estados_unidos": 0.40
+};
+
+const simboloMonedaPeru = document.getElementById("simbolo-moneda-peru");
+const simbolosMoneda = document.querySelectorAll(".simbolo-moneda");
+
+function cambiarPais() {
+  const pais = document.getElementById("pais").value;
+  // Actualizar el contenido de los divs con la información del nuevo país
+  const precio1Valor = document.getElementById("precio1-valor");
+  const precio2Valor = document.getElementById("precio2-valor");
+  const precio3Valor = document.getElementById("precio3-valor");
+
+  const simboloMoneda = document.querySelectorAll(".simbolo-moneda");
+
+  if (pais === "peru") {
+    precio1Valor.textContent = `S/ ${25.00.toFixed(2)}`;
+    precio2Valor.textContent = `S/ ${50.00.toFixed(2)}`;
+    precio3Valor.textContent = `S/ ${100.00.toFixed(2)}`;
+
+    for (const simbolo of simboloMoneda) {
+      simbolo.textContent = "S/";
+    }
+  } else {
+    precio1Valor.textContent = `$ ${25.00.toFixed(2)}`;
+    precio2Valor.textContent = `$ ${50.00.toFixed(2)}`;
+    precio3Valor.textContent = `$ ${100.00.toFixed(2)}`;
+
+    for (const simbolo of simboloMoneda) {
+      simbolo.textContent = "$";
+    }
+  }
+
+  cambiarPrecio();
+}
+
+function cambiarPrecio() {
+  const pais = document.getElementById("pais").value;
+  const precio1Valor = document.getElementById("precio1-valor");
+  const precio2Valor = document.getElementById("precio2-valor");
+  const precio3Valor = document.getElementById("precio3-valor");
+
+  const valor1 = 25 * TIPO_CAMBIO[pais];
+  const valor2 = 50 * TIPO_CAMBIO[pais];
+  const valor3 = 100 * TIPO_CAMBIO[pais];
+
+  if (pais === "peru") {
+    precio1Valor.textContent = `${valor1.toFixed(2)}`;
+    precio2Valor.textContent = `${valor2.toFixed(2)}`;
+    precio3Valor.textContent = `${valor3.toFixed(2)}`;
+  } else {
+    precio1Valor.textContent = `${valor1.toFixed(2)}`;
+    precio2Valor.textContent = `${valor2.toFixed(2)}`;
+    precio3Valor.textContent = `${valor3.toFixed(2)}`;
+  }
+
+  const plan1 = document.querySelector('input[name="plan1"]:checked').value;
+  const plan2 = document.querySelector('input[name="plan2"]:checked').value;
+  const plan3 = document.querySelector('input[name="plan3"]:checked').value;
+
+
+  if (plan1 === "12") {
+    precio1Valor.textContent = `${(valor1 * 10).toFixed(2)}`;
+  }
+  if (plan2 === "12") {
+    precio2Valor.textContent = `${(valor2 * 9.5).toFixed(2)}`;
+  }
+  if (plan3 === "12") {
+    precio3Valor.textContent = `${(valor3 * 8).toFixed(2)}`;
+  }
+}
+
+cambiarPrecio(); // Inicializar los precios al cargar la página
+
+document.querySelectorAll('input[type="radio"]').forEach(radio => {
+  radio.addEventListener('change', cambiarPrecio);
+});
+
+
+      </script>
+</body>
+</html>

@@ -355,6 +355,12 @@ p{
 .ftsz0_9{
   font-size: .9rem;
 }
+.ftsz1{
+  font-size: 1rem;
+}
+.ftsz-1_25{
+  font-size: 1.25rem;
+}
 .ftsz-1_4{
   font-size: 1.4rem;
 }

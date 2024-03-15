@@ -109,6 +109,9 @@ main,.main-p{
 .main-header{
   height: calc( 100svh - var(--header) );
 }
+.main-min-header{
+  min-height: calc( 100svh - var(--header) );
+}
 .main-full{
   height: var(--mobile);
 }
@@ -209,7 +212,7 @@ main,.main-p{
 .clr-g2{
   color: var(--gris2);
 }
-.clr-g3{
+.clr-g3, li.clr-g3 a{
   color: var(--gris3);
 }
 .clr-g4{
@@ -760,7 +763,7 @@ align-items: flex-start;
   flex: 4;
 }
 /*Grid*/
-.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1,.grid-1920-2,.gridcol1-2-resp,.grid2col-fr,.grid2col,.grid-3-1-resp,.grid-f-hor-col,.gridtcol-150,.gridscroll-1{
+.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.grid-5-1,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1,.grid-1920-2,.gridcol1-2-resp,.grid2col-fr,.grid2col,.grid-3-1-resp,.grid-f-hor-col,.gridtcol-150,.gridscroll-1{
   display: grid;
 }
 .grid {
@@ -770,7 +773,7 @@ align-items: flex-start;
   order: -1;
 }
 /*grid responsive*/
-.gridcol1-2-resp,.grid-3-1-resp{
+.gridcol1-2-resp,.grid-3-1-resp,.grid-5-1{
   grid-template-columns: 1fr;
 }
 .grid2col-fr,.grid2col{
@@ -1753,8 +1756,9 @@ input[type=checkbox]{
   .order--1{
     order: 0;
   }
+  
   /*3columnas*/
-  .grid-5-2 {
+  .grid-5-2,.grid-5-1 {
     grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
   }
   .grid3icon {

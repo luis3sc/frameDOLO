@@ -306,7 +306,8 @@ border-color: var(--gris3) !important;
 /*FONTS*/
 /*FONTS*/
 h1{
-  font-size: var(--h1);
+  font-size: 2.7em;
+  line-height: 1.25;
 }
 h2{
   font-size: var(--h2);
@@ -716,6 +717,9 @@ border-radius: .8em .8em 0 0;
 .flex-c, .flex-centro{
   justify-content: center;
 }
+.flexj-start-center{
+  justify-content: flex-start;
+}
 .flex-a, .flex-centro{
   align-items: center;
 }
@@ -1107,6 +1111,9 @@ place-items: center;
 }
 .bot0{
   bottom: 0px;
+}
+.bot-1{
+  bottom: -1em;
 }
 .bot-1_25{
   bottom: -4em;
@@ -1708,6 +1715,9 @@ input[type=checkbox]{
   main{
       height: auto;
   }
+  h1{
+    font-size: var(--h1);
+  }
   .contenedor-lg{
       max-width: 100%;
       width: 90%;
@@ -1718,6 +1728,9 @@ input[type=checkbox]{
   }
   .flex-colum-row-resp{
     flex-direction: row;
+  }
+  .flexj-start-center{
+    justify-content: center;
   }
   .pdnbtm2{
     padding-bottom: 0em;

@@ -585,6 +585,10 @@ max-width: 8em;
   min-width: 1.4em;
   max-height: 1.4em;
 }
+.mw-ico-g{
+  width: 1rem;
+  height: 1rem;
+}
 .mw-ico-r{
   width: 2em;
   height: 2em;
@@ -717,13 +721,13 @@ border-radius: .8em .8em 0 0;
 /*LAYOUT*/
 /*FlexBox*/
 /* flex */
-.flex, .flex-c, .flex-a,.flex-colum,.flex-row, .flex-centro,.flex-spacebetween,.flex-colum-r,.flex-spacearound,.flex-end,.flex-spaceevenly,.flex-c-resp,.flex-colum-rev-resp,.flex-none,.flex-w,.flex-colum-row-resp,.flex-jend,.flex-colum-rev{
+.flex, .flex-c, .flex-a,.flex-colum,.flex-row, .flex-centro,.flex-spacebetween,.flex-colum-r,.flex-spacearound, .flexj-start,.flex-end,.flex-spaceevenly,.flex-c-resp,.flex-colum-rev-resp,.flex-none,.flex-w,.flex-colum-row-resp,.flex-jend,.flex-colum-rev{
   display: flex;
 }
 .flex-c, .flex-centro{
   justify-content: center;
 }
-.flexj-start-center{
+.flexj-start-center, .flexj-start{
   justify-content: flex-start;
 }
 .flex-a, .flex-centro{

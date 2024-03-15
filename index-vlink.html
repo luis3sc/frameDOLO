@@ -615,9 +615,33 @@
     <!--  -->
     <div class="main-min-full padsup-2 bg-g4 flex-centro">
         <div class="padhor-1 mw-1080 gridcol1-2-resp w100">
-            <div class="bg-1 w100">s</div>
+            <div class="bg-1 w100 rel none-resp flex-colum flexj-start flex-centro padsup-1">
+              <h4>¡Descubre el potencial!</h4>
+              <div class="grid2col mgtp gap-5 padhor-1">
+                <div class="flex-a gap-25">
+                  <div class="bg-verd mw-ico-g padding03 bordercircular">
+                    <ion-icon class="w100 clr-3" name="checkmark-outline"></ion-icon>
+                  </div>
+                  <p>Atrae y fideliza a tus clientes</p>
+                </div>
+                <div class="flex-a gap-25">
+                  <div class="bg-verd mw-ico-g padding03 bordercircular">
+                    <ion-icon class="w100 clr-3" name="checkmark-outline"></ion-icon>
+                  </div>
+                  <p>Atrae y fideliza a tus clientes</p>
+                </div>
+                <div class="flex-a gap-25">
+                  <div class="bg-verd mw-ico-g padding03 bordercircular">
+                    <ion-icon class="w100 clr-3" name="checkmark-outline"></ion-icon>
+                  </div>
+                  <p>Atrae y fideliza a tus clientes</p>
+                </div>
+              </div>
+              <img class="mw-320 h-maxc abs bot0" src="./img/log.webp" alt="">
+            </div>
             <div class="bg-b padsup-1 w100">
               <div class="padhor-1">
+                <h4>Registrate Gratis</h4>
                 <form method="post" action="" class="w100 flex-colum gap1"  name="google-sheet" id="google-sheet">
                   <div class="flex-colum-row-resp gap1 w100">
                     <div class="mgtp05 w100">
@@ -643,7 +667,7 @@
                     <div class="mgtp05 w100">
                     <div class="flex-colum-rev">
                       <div class="">
-                        <input class="ftsz-1_25 padding05 w100 border1px brdclr-g3 border05 inputbrdr-1" id="phone" type="tel" name="celular" required>
+                        <input class="ftsz1 padding05 w100 border1px brdclr-g3 border05 inputbrdr-1" id="phone" type="tel" name="celular" required>
                       </div>
                       <label class="flex-a gap-5" for="phone">
                         <p class="ftsz0_9 clr-g6">Celular</p>
@@ -653,19 +677,18 @@
                     </div>
                     <div class="mgtp05 w100">
                     <div class="flex-colum-rev">
-                      <input id="pais" class="ftsz-1_25 padding05 w100 border1px brdclr-g3 border05 inputbrdr-1" type="text" name="pais" required>
+                      <input id="pais" class="ftsz1 padding05 w100 border1px brdclr-g3 border05 inputbrdr-1" type="text" name="pais" required>
                       <label class="flex-a gap-5" for="pais">
                         <p class="ftsz0_9 clr-g6">País</p>
                         <p class="clr-2" id="pais-validation"></p> 
                       </label>
-                      
                     </div>
                     </div>
                   </div>
                   <div class="flex-colum-row-resp gap1 w100">
                     <div class="mgtp05 w100">
                     <div class="flex-colum-rev">
-                      <input id="nombrenegocio" class="ftsz-1_25 padding05 w100 border1px brdclr-g3 border05 inputbrdr-1" type="text" name="nombrenegocio" required>
+                      <input id="nombrenegocio" class="ftsz1 padding05 w100 border1px brdclr-g3 border05 inputbrdr-1" type="text" name="nombrenegocio" required>
                       <label class="flex-a gap-5" for="nombrenegocio">
                         <p class="ftsz0_9 clr-g6">Nombre del Negocio</p>
                         <p class="clr-2" id="nombrenegocio-validation"></p>
@@ -674,7 +697,7 @@
                     </div>
                     <div class="mgtp05 w100">
                     <div class="flex-colum-rev">
-                      <input id="socialmedia" class="ftsz-1_25 padding05 w100 border1px brdclr-g3 border05 inputbrdr-1" type="url" name="socialmedia" required>
+                      <input id="socialmedia" class="ftsz1 padding05 w100 border1px brdclr-g3 border05 inputbrdr-1" type="url" name="socialmedia" required>
                       <label class="flex-a gap-5" for="socialmedia">
                         <p class="ftsz0_9 clr-g6">Enlace de Red Social</p>
                         <p class="clr-2" id="socialmedia-validation"></p>
@@ -686,7 +709,7 @@
                     <div class="flex-colum-rev" >
                       <div class="flex-a rel w100">
                         <p class="abs lef1" id="facebook" value="facebook.com/">facebook.com/</p>
-                        <input id="socialmedia2" class="ftsz-1_25 paddinglef-5_8 padding05 h100 border1px brdclr-g3 border05 winh inputbrdr-1" type="text" name="socialmedia2" required>
+                        <input id="socialmedia2" class="ftsz1 paddinglef-5_8 padding05 h100 border1px brdclr-g3 border05 winh inputbrdr-1" type="text" name="socialmedia2" required>
                       </div>
                       <label class="flex-a gap-5" for="socialmedia2">
                         <p class="ftsz0_9 clr-g6">Enlace de Red Social</p>
@@ -694,7 +717,8 @@
                       </label>
                     </div>
                   </div>
-                  <button class="padding05 ftsz-1_4 border05 bg-2" type="submit">Enviar datos</button>
+                  <button class="btn-md btn-hover brdclr-1 border1px ftsz-1_25 clr-b border05 bg-1" type="submit">Enviar datos</button>
+                  
               </form>
               <div id="mensaje" style="display: none;">
                 <h1>¡Gracias por completar el formulario!</h1>

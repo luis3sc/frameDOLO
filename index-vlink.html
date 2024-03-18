@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,8 +9,30 @@
     <link rel="stylesheet" href="./css/style.css" />
     <!-- formulario datos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <!-- formulario -->
+    <style>
+    @font-face { font-family: "Ionicons"; src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1");
+    src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1#iefix") 
+    format("embedded-opentype"), 
+    url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1")
+    format("truetype"), 
+    url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.woff?v=2.0.1") 
+    format("woff"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.svg?v=2.0.1#Ionicons") 
+    format("svg"); font-weight: normal; font-style: normal; }
+
+      .collapsable button:after {
+        font-family: "Ionicons";
+        content: "\f35d";
+      }
+      .collapsable.active button:after {
+        font-family: "Ionicons";
+              content: "\f366"; /* <--------THE ICON GOES HERE */
+      }
+      .collapsable:not(.active) .content{
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <header class="flex-a bg-b sticky flex-c top0 zindex3">
@@ -253,41 +274,71 @@
         <div class="padhor-1 mw-1080 w100 flex-colum">
             <h2 class="clr-b">Caracteristicas</h2>
             <div class="grid-3-1-resp gap1 mgtp">
-                <div class="bg-b padding1 flex-colum gap-5 border05">
+                <div class="bg-b padding1 flex gap-5 border05">
+                    <div class="bg-b bx border05 padding05 h-fit">
+                      <img class="mw-ico-r f-clr-princi" src="./img/iconos-menu/promoico.png" alt="">
+                    </div>
+                    <div class="flex-colum gap-5">
                     <h6 class="f-bold clr-1">Captura de Datos</h3>
                     <p>Recopila información importante de tus
                         clientes potenciales y
-                        existentes.</p>    
+                        existentes.</p>   
+                    </div>     
                 </div>
-                <div class="bg-b padding1 flex-colum gap-5 border05">
+                <div class="bg-b padding1 flex gap-5 border05">
+                  <div class="bg-b bx border05 padding05 h-fit">
+                    <img class="mw-ico-r f-clr-princi" src="./img/iconos-menu/ruleta.png" alt="">
+                  </div>
+                  <div>
                     <h6 class="f-bold clr-1">Diseños personalizados</h3>
                     <p>Crea ruletas digitales con la
                         imagen de tu marca y colores
-                        corporativos.</p>    
+                        corporativos.</p>
+                  </div>
                 </div>
-                <div class="bg-b padding1 flex-colum gap-5 border05">
+                <div class="bg-b padding1 flex gap-5 border05">
+                  <div class="bg-b bx border05 padding05 h-fit">
+                    <img class="mw-ico-r f-clr-princi" src="./img/iconos-menu/compartir-icono.png" alt="">
+                  </div>
+                  <div>
                     <h6 class="f-bold clr-1">Distribución Multicanal</h6>
                     <p>Comparte tus ruletas en tu
                         sitio web, redes sociales,
-                        correo y anuncios impresos.</p>    
+                        correo y anuncios impresos.</p> 
+                  </div>
                 </div>
-                <div class="bg-b padding1 flex-colum gap-5 border05">
+                <div class="bg-b padding1 flex gap-5 border05">
+                  <div class="bg-b bx border05 padding05 h-fit">
+                    <img class="mw-ico-r f-clr-princi" src="./img/iconos-menu/shield.png" alt="">
+                  </div>
+                  <div>
                     <h6 class="f-bold clr-1">Métodos de Validación</h3>
                     <p>Verificamos los datos  con
                         diferentes métodos de 
-                        Anti fraude.</p>    
+                        Anti fraude.</p> 
+                  </div> 
                 </div>
-                <div class="bg-b padding1 flex-colum gap-5 border05">
+                <div class="bg-b padding1 flex gap-5 border05">
+                  <div class="bg-b bx border05 padding05 h-fit">
+                    <img class="mw-ico-r f-clr-princi" src="./img/iconos-menu/leaderboard.svg" alt="">
+                  </div>
+                  <div>
                     <h6 class="f-bold clr-1">Estadísticas</h3>
                     <p>Brindamos estadísticas de
                         tus campañas para ayudarte
-                        en tus estrategias.</p>    
+                        en tus estrategias.</p>
+                  </div>    
                 </div>
-                <div class="bg-b padding1 flex-colum gap-5 border05">
+                <div class="bg-b padding1 flex gap-5 border05">
+                  <div class="bg-b bx border05 padding05 h-fit">
+                    <img class="mw-ico-r f-clr-princi" src="./img/iconos-menu/export-2.webp" alt="">
+                  </div>
+                  <div>
                     <h6 class="f-bold clr-1">Exportar datos</h3>
                     <p>Descarga los datos obtenidos 
                         en formatos csv o excel para
-                        exportar en tu CRM.</p>    
+                        exportar en tu CRM.</p>   
+                  </div>   
                 </div>
             </div>
         </div>
@@ -297,7 +348,8 @@
             <h2 class="clr-g6">Casos de Uso</h2>
             <div class="grid-3-1-resp gap1 mgtp">
                 <div class="bg-b flex-colum gap-5 border05 sinover">
-                    <div class="bg-2 h-150">
+                    <div class="bg-2 h-150 sinover flex-centro rel">
+                      <img class="w80 abs bot--2" src="./img/casosdeuso-1.png" alt="">
                     </div>
                     <div class="padding1">
                     <h6 class="f-bold clr-1">Descuentos</h3>
@@ -308,8 +360,9 @@
                     </div>
                 </div>
                 <div class="bg-b flex-colum gap-5 border05 sinover">
-                    <div class="bg-2 h-150">
-                    </div>   
+                    <div class="bg-2 h-150 sinover flex-centro rel">
+                      <img class="w80 abs bot--2" src="./img/casosdeuso-2.png" alt="">
+                    </div> 
                     <div class="padding1"> 
                         <h6 class="f-bold clr-1">Sorteos y Concursos</h6>
                         <p>Genera expectación y aumenta
@@ -320,7 +373,8 @@
                     </div>
                 </div>
                 <div class="bg-b flex-colum gap-5 border05 sinover">
-                    <div class="bg-2 h-150">
+                    <div class="bg-2 h-150 sinover flex-centro rel">
+                      <img class="w80 abs bot--2" src="./img/casosdeuso-3.png" alt="">
                     </div>
                     <div class="padding1">
                         <h6 class="f-bold clr-1">Activaciones o Ferias</h6>
@@ -421,15 +475,15 @@
       </div>
     </div>
     <!--  -->
-    <div class="main-min-full padsup-2 bg-g1 flex-c">
+    <div class="main-min-full padsup-3 bg-g1 flex-c">
         <div class="mw-1080 w100 flex-colum">
             <div class="padhor-1">
               <h2 class="clr-g6">Nuestros Planes</h2>
               <p>Eliga el plan que mas se adecua a usted</p>
             </div>
             <!-- pricing tabla con select box -->
-            <div class="padhor-1">
-              <select class="padop1 ftsz-1_4 w100 mw-280" id="pais" onchange="cambiarPais()">
+            <div class="padhor-1 mgtp">
+              <select class="padop1 ftsz-1_15 w100 mw-280 border05" id="pais" onchange="cambiarPais()">
                 <option value="peru" selected>Perú (PEN)</option>
                 <option value="mexico">México (USD)</option>
                 <option value="argentina">Argentina (USD)</option>
@@ -490,7 +544,46 @@
                 </div>
                 <!-- precio2 -->
                 <!-- precio2 -->
-                <div class="border1px brdclr-g4 border05 padsup-2">
+                <div class="bg-1 clr-b border05 padsup-2">
+                  <div class="padhor-1 w100 flex-colum gap1">
+                    <div>
+                    <h3>Básico</h3>
+                    <p>Desbloquea más funciones y potencia el marketing de tu negocio.</p>
+                    </div>
+                    <div class="padding1 border1px border05 brdclr-g3 clr-b flex-colum gap1">
+                      <div id="precio2" class="flex gap-5 w100 ">
+                        <div class="planes2 w100">
+                          <label>
+                            <input type="radio" name="plan2" value="3" checked>
+                            <div class="w100 padop1 border1px border05">
+                              <p>3 meses</p>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="planes2 w100">
+                          <label>
+                            <input type="radio" name="plan2" value="12">
+                            <div class="w100 padop1 border1px border05">
+                              <p>12 meses</p>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                      <div>
+                        <p class="lnh-1">desde</p>
+                        <span class="simbolo-moneda">S/</span>
+                        <span id="precio2-valor" class="f-bold ftsz-1_5">25.00</span>
+                      </div>
+                    </div>
+                    <a class="btn-md bg-ama w100 mgauto border05  brdclr-1 border1px btn-hover flex-centro" href="#">
+                    Registrate Ahora
+                    </a>
+                    <p class="caption clr-g3 lnh-1">*aplican excesiones si se excede 
+                    el límite de vistas de pagina.
+                    <a class="clr-b" href="#">aprender más</a></p>
+                  </div>
+                </div>
+                <!-- <div class="border1px brdclr-g4 border05 padsup-2">
                   <div class="padhor-1 w100 flex-colum gap1">
                     <div>
                     <h3>Básico</h3>
@@ -528,7 +621,7 @@
                     el límite de vistas de pagina.
                     <a class="clr-n" href="#">aprender más</a></p>
                   </div>
-                </div>
+                </div> -->
                 <!-- precio3 -->
                 <!-- precio3 -->
                 <div class="border1px brdclr-g4 border05 padsup-2">
@@ -573,8 +666,9 @@
                   </div>
                 </div>
               </div>
-              <div class="gridcol1-2-resp gap1 padhor-1 mgtp">
-                <!-- precio 4 -->
+              <!-- EMPRESARIAL Y MARCA BLANCA -->
+              <!-- <div class="gridcol1-2-resp gap1 padhor-1 mgtp">
+              
                 <div class="border1px brdclr-g4 border05 padsup-2">
                   <div class="padhor-1 w100 flex-colum gap1">
                     <div>
@@ -592,7 +686,7 @@
 
                   </div>
                 </div>
-                <!-- precio 5 -->
+                
                 <div class="border1px brdclr-g4 border05 padsup-2">
                   <div class="padhor-1 w100 flex-colum gap1">
                     <div>
@@ -608,12 +702,315 @@
 
                   </div>
                 </div>
+              </div> -->
+              <!-- EMPRESARIAL Y MARCA BLANCA -->
+
+              <!-- caracteristicas funcionalidades -->
+              <div class="collapsable mgtp flex-colum">
+                <button>
+                  Ver mas funcionalidades
+                </button>
+                <div class="content w100 bg-1 mgtp padsup-1">
+                  <div class="padhor-1  w100 padhor1">
+                    <div class="bg-b rel">
+                      <!-- header - tabla -->
+                      <div class="flex sticky bg-b zindex1 top-header">
+                        <div class="flex-1 bg-b border1px brdclr-g4">
+                          <div class="flex-colum">
+                            <div class="padsup-1 h-60 w100 flex-centro">
+                              
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p class="ftsz0_9">Visitas de Página</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p class="ftsz0_9">Ruletas Activas</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Recolección de Datos</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Formulario para Registro</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Descargue Datos</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Estadisticas de Datos</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Usuarios</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Usuario Admin</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Panel de Admin</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Sub-Usuarios</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Configuración</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Multi Dispositivos</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Insertar en su Dominio</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Código QR y Enlace</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Marcas y Temas</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Personalización</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Marca Blanca</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Publicidad de Vlinkea</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Soporte</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Nivel de Soporte</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Entrenamiento</p></div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <div class="flex-2 bg-b border1px brdclr-g4 overhor grid-f-hor-col grid-a-scroll2 gridscroll-2 contain-paint overscroll-cont scroll-snap-1 touch-a">
+                          <div class="flex-colum">
+                            <div class="padsup-1 bg-1 h-60 w100 flex-centro">
+                              <h5>Gratis</h5>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p class="ftsz0_9">Visitas de Página</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p class="ftsz0_9">Ruletas Activas</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Recolección de Datos</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Formulario para Registro</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Descargue Datos</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Estadisticas de Datos</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Usuarios</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Usuario Admin</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Panel de Admin</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Sub-Usuarios</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Configuración</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Multi Dispositivos</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Insertar en su Dominio</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Código QR y Enlace</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Marcas y Temas</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Personalización</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Marca Blanca</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Publicidad de Vlinkea</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <h6>Soporte</h6></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Nivel de Soporte</p></div>
+                            </div>
+                            <div class="padsup-1">
+                              <div class="padhor-0_5">
+                              <p>Entrenamiento</p></div>
+                            </div>
+                          </div>
+                          <div class="flex-colum">
+                            <div class="padsup-1 bg-1 w100 flex-centro">
+                              <h5>Básico</h5>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                          </div>
+                          <div class="flex-colum">
+                            <div class="padsup-1 bg-1 w100 flex-centro">
+                              <h5>Premium</h5>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                          </div>
+                          <div class="flex-colum">
+                            <div class="padsup-1 bg-1 w100 flex-centro">
+                              <h5>Empresarial</h5>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                            <div class="padsup-1">
+                              <p>asdsad</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- header - tabla -->
+                      <!-- cuerpo - tabla -->
+                      
+                      <!-- cuerpo - tabla -->
+                    </div>
+                    
+                  </div>
+                </div>
               </div>
+              <!-- sd -->
+              <!-- sd -->
             </section>
         </div>
     </div>
     <!--  -->
-    <div class=" padsup-2 bg-g4 flex-centro">
+    <div class=" padsup-3 bg-gd1 flex-centro">
         <div class="padhor-1 mw-1080 gridcol1-2-resp w100">
             <div class="bg-1 minh-520 w100 rel none-resp flex-colum flexj-start flex-centro padsup-2">
               <h4 class="clr-b">¡Descubre el potencial!</h4>
@@ -797,6 +1194,8 @@
         </a>
       </div>
     </div>
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- iconos -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -810,6 +1209,11 @@
     <!-- script general -->
     <!-- precios -->
     <script src="./js/precios.js"></script>
+    <script>
+      $('.collapsable button').click(function(){
+        $(this).parent().toggleClass('active');
+          });
+    </script>
     <script>
     const imagenes = [
       {

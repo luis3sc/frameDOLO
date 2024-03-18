@@ -703,6 +703,9 @@ height: 15%;
 .minh-320{
   max-height: 420px;
 }
+.minh-520{
+  min-height: 520px;
+}
 .minh-270{
   min-height:  400px;
 }
@@ -1089,7 +1092,7 @@ place-items: center;
 .fxd,.fxd-resp,.fxdresp{
   position: fixed;
 }
-.rel{
+.rel,.rel-abs{
   position: relative;
 }
 .abs,.abs-rel-resp{
@@ -1122,9 +1125,11 @@ place-items: center;
 .bot0{
   bottom: 0px;
 }
-.bot-1{
+.bot-1,.bottom-banner{
   bottom: -1em;
 }
+/* bottom header */
+
 .bot-1_25{
   bottom: -4em;
 }
@@ -1733,15 +1738,7 @@ input[type=checkbox]{
       width: 90%;
       padding: 0;
   }
-  .flex-colum-rev-resp,.grid-flxc{
-    flex-direction: column;
-  }
-  .flex-colum-row-resp{
-    flex-direction: row;
-  }
-  .flexj-start-center{
-    justify-content: center;
-  }
+  
   .pdnbtm2{
     padding-bottom: 0em;
   }
@@ -1754,20 +1751,36 @@ input[type=checkbox]{
   .mw-420-resp{
     max-width: 440px;
   }
-  .d-none-resp{
-      display: block;
-  }
-  .none-resp,.grid-flxc{
-    display: flex;
-  }
+  
+ /* positions */
   .fxdresp{
     position: relative;
+  }
+  .rel-abs{
+    position: absolute;
   }
   .botnav{
     bottom: 0;
   }
+  /* display */
   .fxd-resp,.flex-none,.d-resp,.block-none{
     display: none;
+  }
+  .d-none-resp{
+    display: block;
+}
+.none-resp,.grid-flxc{
+  display: flex;
+}
+  /* flex */
+  .flex-colum-rev-resp,.grid-flxc{
+    flex-direction: column;
+  }
+  .flex-colum-row-resp{
+    flex-direction: row;
+  }
+  .flexj-start-center{
+    justify-content: center;
   }
   /*GRID*/
   .gridcol1-2-resp,.grid-3-1-resp{
@@ -1892,6 +1905,9 @@ input[type=checkbox]{
   .mw1080resp{
     max-width: 700px;
   }
+  .mw-420-resp{
+    max-width: 540px;
+  }
   /*GRID*/
   .grid-1920-2{
     grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));
@@ -1927,6 +1943,9 @@ input[type=checkbox]{
     bottom: -1.5em;
     right: 0;
   }
+  .bottom-banner{
+    bottom: -11em;
+  }
 }
   
 @media screen and (min-width: 1280px) {
@@ -1958,6 +1977,17 @@ input[type=checkbox]{
   }
   
 }
+@media screen and (min-width: 1365px){
+  .mw-1080{
+    max-width: 1260px;
+  }
+  .mw-420-resp{
+    max-width: 580px;
+  }
+  .bottom-banner{
+    bottom: -12em;
+  }
+}
 @media screen and (min-width: 1440px){
   .mw1080resp{
     max-width: 980px;
@@ -1983,9 +2013,18 @@ input[type=checkbox]{
   .padsup{
     padding: 1.5em 0;
     }
+  .mw-1080{
+    max-width: 1360px;
+  }
   /*5columnas*/
   .grid-4-2 {
       grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  }
+  .mw-420-resp {
+    max-width: 680px;
+  }
+  .bottom-banner{
+    bottom: -16em;
   }
 }
 @media screen and (min-width: 1910px){
